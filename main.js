@@ -27,6 +27,10 @@ let chanceArea = document.getElementById("chance-area");
 
 playButton.addEventListener("click", play);
 resetButton.addEventListener("click", reset);
+//input창에 focus하면 전에 입력한 값 초기화
+userInput.addEventListener("focus", () => {
+  userInput.value = "";
+});
 
 function pickRandomNum() {
   computerNum = Math.floor(Math.random() * 100) + 1;
