@@ -48,6 +48,7 @@ function play() {
     //console.log("Down!!");
   } else {
     resultArea.textContent = "정답입니다!!";
+    gameOver = true;
     //console.log("정답입니다!!");
   }
 
