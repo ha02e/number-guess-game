@@ -17,10 +17,30 @@
 //유저가 이미 입력한 숫자를 또 입력하면 알려준다. 기회 깎지 않는다.
 
 let computerNum = 0;
+let playButton = document.getElementById("play-button");
+let userInput = document.getElementById("user-input");
+let resultArea = document.getElementById("result-area");
+
+playButton.addEventListener("click", play);
 
 function pickRandomNum() {
   computerNum = Math.floor(Math.random() * 100) + 1;
   console.log("정답", computerNum);
+}
+
+function play() {
+  let userValue = userInput.value; //유저가 입력한 숫자
+
+  if (userValue < computerNum) {
+    resultArea.textContent = "Up!!";
+    //console.log("Up!!");
+  } else if (userValue > computerNum) {
+    resultArea.textContent = "Down!!";
+    //console.log("Down!!");
+  } else {
+    resultArea.textContent = "정답입니다!!";
+    //console.log("정답입니다!!");
+  }
 }
 
 pickRandomNum();
