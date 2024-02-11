@@ -33,7 +33,7 @@ userInput.addEventListener("focus", () => {
 });
 
 function pickRandomNum() {
-  computerNum = Math.floor(Math.random() * 100) + 1;
+  computerNum = Math.floor(Math.random() * 10) + 1;
   console.log("정답", computerNum);
 }
 
