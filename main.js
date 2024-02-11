@@ -21,7 +21,7 @@ let playButton = document.getElementById("play-button");
 let userInput = document.getElementById("user-input");
 let resultArea = document.getElementById("result-area");
 let resetButton = document.getElementById("reset-button");
-let chances = 5;
+let chances = 10;
 let gameOver = false;
 let chanceArea = document.getElementById("chance-area");
 
