@@ -20,8 +20,10 @@ let computerNum = 0;
 let playButton = document.getElementById("play-button");
 let userInput = document.getElementById("user-input");
 let resultArea = document.getElementById("result-area");
+let resetButton = document.getElementById("reset-button");
 
 playButton.addEventListener("click", play);
+resetButton.addEventListener("click", reset);
 
 function pickRandomNum() {
   computerNum = Math.floor(Math.random() * 100) + 1;
@@ -41,6 +43,13 @@ function play() {
     resultArea.textContent = "정답입니다!!";
     //console.log("정답입니다!!");
   }
+}
+
+function reset() {
+  //user input 창이 깨끗하게 정리됨
+  userInput.value = "";
+  //새로운 랜덤 번호가 생성
+  pickRandomNum();
 }
 
 pickRandomNum();
