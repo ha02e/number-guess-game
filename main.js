@@ -53,6 +53,7 @@ function play() {
   }
 
   if (gameOver == true) {
+    resultArea.textContent = "GAME OVER";
     playButton.disabled = true;
   }
 }
@@ -68,7 +69,7 @@ function reset() {
   gameOver = false;
   playButton.disabled = false;
 
-  resultArea.textContent = "1~100 숫자를 입력해주세요.";
+  resultArea.textContent = "Enter a number between 1~100.";
 }
 
 pickRandomNum();

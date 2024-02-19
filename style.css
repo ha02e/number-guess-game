@@ -112,6 +112,10 @@ body {
   background-repeat: no-repeat;
 }
 
+#user-area button:disabled {
+  background-color: #213e60;
+}
+
 #footer-area {
   width: 160px;
   display: flex;
