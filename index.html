@@ -4,29 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Up&Down 숫자 게임</title>
-    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=East+Sea+Dokdo&display=swap"
+      href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="game-board">
-      <h1>Up & Down 숫자 게임</h1>
+      <div class="title">
+        <h1>
+          <span class="title-color1">Up</span><span class="title-color3">&</span
+          ><span class="title-color2">Down</span>
+        </h1>
+        <h2>
+          <span class="title-color2">NUMBER</span
+          ><span class="title-color1">GAME</span>
+        </h2>
+      </div>
       <div id="chance-area">남은 기회 : 10번</div>
-      <div id="result-area">숫자를 입력해주세요!</div>
+      <div id="result-area">Enter a number between 1~100.</div>
       <div id="user-area">
         <input
           type="number"
           id="user-input"
-          value="1~100 숫자를 입력해주세요."
+          size="50"
+          placeholder="1~100 숫자를 입력해주세요."
         />
-        <button id="play-button">입력</button>
+        <button id="play-button"></button>
       </div>
-      <div id="reset-area">
-        <button id="reset-button">다시하기</button>
+      <div id="footer-area">
+        <button id="reset-button"></button>
+        <button id="share-button"></button>
       </div>
     </div>
     <script src="main.js"></script>

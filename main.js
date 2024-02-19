@@ -23,13 +23,12 @@ function play() {
   let userValue = userInput.value;
 
   if (userValue < 1 || userValue > 100) {
-    resultArea.textContent = "1~100 사이 숫자를 입력해주세요.";
+    resultArea.textContent = "Enter a number between 1~100.";
     return;
   }
 
   if (history.includes(userValue)) {
-    resultArea.textContent =
-      "이미 입력한 숫자입니다. 다른 숫자를 입력해주세요.";
+    resultArea.textContent = "This number has already been.";
     return;
   }
 
@@ -37,11 +36,11 @@ function play() {
   chanceArea.textContent = `남은 기회 : ${chances}번`;
 
   if (userValue < computerNum) {
-    resultArea.textContent = "Up!!";
+    resultArea.textContent = "UP!!";
   } else if (userValue > computerNum) {
-    resultArea.textContent = "Down!!";
+    resultArea.textContent = "DOWN!!";
   } else {
-    resultArea.textContent = "정답입니다!!";
+    resultArea.textContent = "CLEAR!!";
     gameOver = true;
   }
 

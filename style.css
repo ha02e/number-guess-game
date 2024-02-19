@@ -1,112 +1,162 @@
+body {
+  margin: 0;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 #game-board {
-  max-width: 860px;
-  height: 562px;
-  margin: 40px auto;
-  background-image: url(/images/blackboard.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
+  min-height: 80vh;
+  background-color: #ffffff;
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #game-board h1 {
-  font-family: "East Sea Dokdo", sans-serif;
+  color: #ffffff;
+  font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
-  font-size: 90px;
-  color: white;
   text-align: center;
-  margin: 20px 0 10px 0;
-  padding-top: 40px;
+  font-size: 4.2em;
+}
+
+.title-color1 {
+  color: #d2ff58;
+}
+
+.title-color2 {
+  color: #ff7833;
+}
+
+.title-color3 {
+  color: #19afd0;
+}
+
+#game-board h2 {
+  color: #ffffff;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 3em;
 }
 
 #chance-area {
-  font-family: "Dongle", sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  font-style: normal;
-  color: white;
+  color: #ffffff;
   text-align: center;
-  margin-bottom: 20px;
-}
-
-#result-area {
+  margin: 10px;
   font-family: "East Sea Dokdo", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 32px;
-  color: white;
-  text-align: center;
+  font-size: 2.4em;
 }
 
-#user-area,
-#reset-area {
-  width: 100%;
+#result-area {
   text-align: center;
-  margin: 30px 0;
-}
-
-#user-input {
+  margin: 20px;
   padding: 10px 20px;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1em;
+  color: #d2ff58;
+  background-color: #000000;
+  text-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
 }
 
-#play-button {
+#user-area {
+  position: relative;
+  margin: 20px 0px 40px 0;
+}
+
+#user-area input {
+  border: none;
+  width: 340px;
+  height: 50px;
+  padding: 0 20px;
+  margin: 0;
+}
+
+#user-area button {
   cursor: pointer;
   border: none;
-  border-radius: 20px;
-  width: 80px;
-  height: 40px;
-  white-space: nowrap;
-  background-color: #3c5be7;
-  color: #ffffff;
-  box-shadow: 3px 3px 3px rgba(0.4, 0.4, 0.4, 0.2);
-  transition: 0.3s;
-  font-family: "Dongle", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 50px;
+  background-color: #19afd0;
+  background-image: url(/images/enter.png);
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
 }
 
-#play-button:disabled {
-  background-color: #3a3a3a;
-  cursor: none;
+#footer-area {
+  width: 26%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#footer-area button {
+  cursor: pointer;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #19afd0;
+  transition: all 0.2s;
 }
 
 #reset-button {
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  border-radius: 20px;
-  width: 100px;
-  height: 40px;
-  white-space: nowrap;
-  background-color: #e74c3c;
-  color: #ffffff;
-  box-shadow: 3px 3px 3px rgba(0.4, 0.4, 0.4, 0.2);
-  transition: 0.3s;
-  font-family: "Dongle", sans-serif;
-  font-weight: 700;
-  font-size: 28px;
+  background-image: url(/images/reset.png);
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
 }
 
-#reset-button:active,
-#play-button:active {
-  box-shadow: none;
+#reset-button:hover {
+  background-size: 63%;
 }
 
-@media screen and (max-width: 600px) {
+#share-button {
+  background-image: url(/images/share.png);
+  background-position: center;
+  background-size: 62%;
+  background-repeat: no-repeat;
+  transition: all 0.2s;
+}
+
+#share-button:hover {
+  background-size: 65%;
+}
+
+@media (min-width: 600px) {
+  #game-board {
+    width: 600px;
+    border-radius: 20px;
+  }
+}
+
+/* 모바일버전 */
+@media (max-width: 600px) {
+  #game-board {
+    width: 90vw;
+    height: 100vh;
+    border-radius: 0px;
+  }
+
   #game-board h1 {
-    font-size: 60px;
-    margin: 0;
-    padding-top: 30px;
-  }
-  #chance-area {
-    font-size: 28px;
-    margin-bottom: 0px;
-  }
-  #result-area {
-    font-size: 30px;
-    margin: 6px 0 20px 0;
-  }
-  #user-area,
-  #reset-area {
-    margin: 14px 0;
+    font-size: 3.2em;
   }
 }
