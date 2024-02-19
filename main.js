@@ -3,7 +3,7 @@ let playButton = document.getElementById("play-button");
 let userInput = document.getElementById("user-input");
 let resultArea = document.getElementById("result-area");
 let resetButton = document.getElementById("reset-button");
-let chances = 10;
+let chances = 6;
 let gameOver = false;
 let chanceArea = document.getElementById("chance-area");
 let history = [];
@@ -13,6 +13,8 @@ resetButton.addEventListener("click", reset);
 userInput.addEventListener("focus", () => {
   userInput.value = "";
 });
+
+updateChance();
 
 function pickRandomNum() {
   computerNum = Math.floor(Math.random() * 100) + 1;
@@ -33,7 +35,7 @@ function play() {
   }
 
   chances--;
-  chanceArea.textContent = `남은 기회 : ${chances}번`;
+  updateChance();
 
   if (userValue < computerNum) {
     resultArea.textContent = "UP!!";
@@ -60,11 +62,24 @@ function reset() {
 
   pickRandomNum();
 
+  chances = 6;
+  updateChance();
+
   gameOver = false;
   playButton.disabled = false;
-  chances = 10;
 
   resultArea.textContent = "1~100 숫자를 입력해주세요.";
 }
 
 pickRandomNum();
+
+function updateChance() {
+  let chanceIcon = document.getElementById("chance-icon");
+  chanceIcon.innerHTML = ""; // 이전 하트들을 지움
+
+  for (let i = 0; i < chances; i++) {
+    const imgElement = document.createElement("img");
+    imgElement.src = "/images/on-heart.png";
+    chanceIcon.appendChild(imgElement);
+  }
+}
