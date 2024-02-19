@@ -103,7 +103,7 @@ body {
 }
 
 #footer-area {
-  width: 26%;
+  width: 160px;
   display: flex;
   justify-content: space-around;
 }
@@ -157,6 +157,10 @@ body {
   }
 
   #game-board h1 {
-    font-size: 3.2em;
+    font-size: 3em;
+  }
+
+  #game-board h2 {
+    font-size: 2.2em;
   }
 }
