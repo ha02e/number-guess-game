@@ -10,6 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+      Kakao.init("0621b67296d33cb8b7985665fd4703ed");
+      Kakao.isInitialized();
+    </script>
+    <script src="share.js"></script>
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -45,16 +51,6 @@
       </div>
     </div>
 
-    <script>
-      Kakao.init("0621b67296d33cb8b7985665fd4703ed");
-      Kakao.isInitialized();
-    </script>
-    <script
-      src="https://t1.kakaocdn.net/kakao_js_sdk/${VERSION}/kakao.min.js"
-      integrity="${INTEGRITY_VALUE}"
-      crossorigin="anonymous"
-    ></script>
-    <script src="share.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

@@ -7,8 +7,8 @@ function kakaoShare() {
       imageUrl:
         "https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
       link: {
-        mobileWebUrl: "https://developers.kakao.com",
-        webUrl: "https://developers.kakao.com",
+        mobileWebUrl: "https://hy-number-guess-game.netlify.app/",
+        webUrl: "https://hy-number-guess-game.netlify.app/",
       },
     },
     itemContent: {
