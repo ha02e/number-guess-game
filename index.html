@@ -41,9 +41,20 @@
       </div>
       <div id="footer-area">
         <button id="reset-button"></button>
-        <button id="share-button"></button>
+        <button id="share-button" onclick="js:kakaoShare()"></button>
       </div>
     </div>
+
+    <script>
+      Kakao.init("0621b67296d33cb8b7985665fd4703ed");
+      Kakao.isInitialized();
+    </script>
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/${VERSION}/kakao.min.js"
+      integrity="${INTEGRITY_VALUE}"
+      crossorigin="anonymous"
+    ></script>
+    <script src="share.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

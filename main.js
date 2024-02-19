@@ -18,7 +18,7 @@ updateChance();
 
 function pickRandomNum() {
   computerNum = Math.floor(Math.random() * 100) + 1;
-  //console.log("정답", computerNum);
+  console.log("정답", computerNum);
 }
 
 function play() {
@@ -49,11 +49,11 @@ function play() {
   history.push(userValue);
 
   if (chances < 1) {
+    resultArea.textContent = "GAME OVER";
     gameOver = true;
   }
 
   if (gameOver == true) {
-    resultArea.textContent = "GAME OVER";
     playButton.disabled = true;
   }
 }
@@ -76,7 +76,7 @@ pickRandomNum();
 
 function updateChance() {
   let chanceIcon = document.getElementById("chance-icon");
-  chanceIcon.innerHTML = ""; // 이전 하트들을 지움
+  chanceIcon.innerHTML = "";
 
   for (let i = 0; i < chances; i++) {
     const imgElement = document.createElement("img");
